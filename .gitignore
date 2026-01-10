@@ -1,0 +1,12 @@
+# C++ compiled files
+*.exe
+*.out
+
+# Java compiled files
+*.class
+
+# VS Code settings
+.vscode/
+
+# Logs / temp
+*.log
