@@ -22,7 +22,8 @@ class Solution{
 int main(){
     Solution obj;
     int n;
+    cout<<"enter the number: ";
     cin>>n;
-    cout<<obj.countdigit(n)<<endl;
+    cout<<"no of digit: "<<obj.countdigit(n)<<endl;
     return 0;
 }
