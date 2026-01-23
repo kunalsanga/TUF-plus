@@ -1,19 +1,24 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Solution {	
-public:		
+class Solution {
+public:
+    // Recursive helper function
+    void helper(vector<char>& s, int left, int right) {
+        // Base case: when pointers meet or cross
+        if (left >= right)
+            return;
+
+        // Swap characters at left and right
+        swap(s[left], s[right]);
+
+        // Recursive call for the remaining inner string
+        helper(s, left + 1, right - 1);
+    }
+
+    // Function required by the problem
     vector<char> reverseString(vector<char>& s) {
-        int left = 0;
-        int right = s.size() - 1;
-
-        // Reverse using two pointers
-        while (left < right) {
-            swap(s[left], s[right]);
-            left++;
-            right--;
-        }
-
+        helper(s, 0, s.size() - 1);
         return s;
     }
 };
